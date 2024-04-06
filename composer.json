@@ -38,6 +38,9 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
+    "branch-alias": {
+      "dev-master": "11.x-dev"
+    },
     "laravel": {
       "providers": [
         "HieuLe\\Active\\ActiveServiceProvider"

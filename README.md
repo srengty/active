@@ -16,7 +16,8 @@ Since version 7.0, the major version of this library will match the major versio
 
 | Laravel version | Active library version  |
 | --------------- | ----------------------- |
-| >= 7.x          | >= 7.x                  |
+| 11.x            | 11.x                    |
+| 7.x             | 7.x                     |
 | 6.x             | 4.x                     |
 | 5.x             | 3.x                     |
 | 4.x             | 1.x                     |
