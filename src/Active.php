@@ -36,7 +36,7 @@ class Active
      *
      * @var Route
      */
-    protected $route;
+    protected Route $route;
 
     /**
      * Current action string
@@ -334,4 +334,35 @@ class Active
         return $this->controller ?: "";
     }
 
+    /**
+     * Return 'active' class if current route match a pattern
+     * 
+     * @param string|array $patterns
+     * @param string $class
+     * 
+     * @return string
+     */
+    public function pattern($patterns, $class = 'active')
+    {
+        $currentRequest = $this->route->getCurrentRequest();
+
+        if (!$currentRequest)
+        {
+            return '';
+        }
+
+        $uri = urldecode($currentRequest->path());
+
+        if (!is_array($patterns))
+        {
+            $patterns = array($patterns);
+        }
+
+        if($this->checkUriPattern($patterns))
+        {
+            return $class;
+        }
+
+        return '';
+    }
 }
