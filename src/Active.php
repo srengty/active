@@ -36,7 +36,7 @@ class Active
      *
      * @var Route
      */
-    protected Route $route;
+    protected ?Route $route;
 
     /**
      * Current action string
