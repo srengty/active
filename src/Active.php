@@ -344,7 +344,7 @@ class Active
      */
     public function pattern($patterns, $class = 'active')
     {
-        $currentRequest = $this->route->getCurrentRequest();
+        $currentRequest = $this->request;
 
         if (!$currentRequest)
         {
